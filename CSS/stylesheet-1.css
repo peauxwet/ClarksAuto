@@ -1,0 +1,1895 @@
+* {                  /*<--This resets the default margin and padding settings that some browsers have.*/
+    padding: 0;
+    margin: 0;
+}
+
+html{                  /*<--Sets the value of root em*/
+    font-size: 62.5%;   /*<--Percentage of user's browser font size setting. This is a standard used by most web developers.*/
+}                       /*This allows the user to dynamically resize the font instead of having a fixed font size with px.*/
+
+    
+
+/*full screen style*/
+@media screen and (min-width: 1050px){
+
+    body{
+        font-family: sans-serif;    /*sets font for the body*/
+        line-height: 1;             /*sets the  verticle size of the lines the text will be placed in*/
+        font-weight: 400;           /*sets the thickness of the font used in the body*/
+        color: #171717;           /*sets the color of the text that will be written in the body*/
+    }
+	
+    /*-----------------------------------------------------INDEX PAGE----------------------------------------------------------------*/
+
+    /*------------------
+    ---HEADER SECTION---
+    ------------------*/
+    .all-header{
+        display: grid;                              /*splits the nav bar into three columns*/
+        grid-template-columns: repeat(3, 1fr);      /*-------------------------------------*/
+        background-color: #FA7820;                /*sets background color of nav bar*/
+        border-bottom-style: solid;
+        border-color: black;
+    }
+
+    .logo-link{
+        color: #171717;           /*sets color of words net to logo in nav bar*/
+        text-decoration: none;      /*removes the underline from the text in the logo link*/
+        max-width: 20vw;            /*removes "overflow" of link area. keeps the link only in the space that the words and logo take up*/
+    }
+
+    .logo-link:visited{
+        color: #171717;         /*sets color of link after visiting it*/
+        text-decoration: none;    /*removes underline of link after visiting it*/
+        max-width: 20vw;          /*keeps clickble link area only where the words and logo are shown*/
+    }
+
+    .nav-icon{
+        display: flex;            /*instead of grid, creating a flex layout*/
+        flex-direction: row;      /*sets the direction that elements will be placed in*/
+        align-items: center;      /*puts the items in the center horizontally*/
+    }
+
+    .nav-pic{
+        max-width: 20%;         /*sets the size of the picture*/
+        border-radius: 3vw;     /*makes the logo picture round*/
+    }
+
+    .nav-icon-txt{
+        font-size: 1.25vw;      /*sets the font size of the text in the logo link*/
+    }
+
+    .nav-btns{
+        font-size: 1.4vw;       /*sets the font size for all of the elements in the nav-btns section*/
+        margin: auto;           /*only sets the size of the main div to the size of the elements inside of it*/
+        margin-right: 1.3vw;    /*doing this to put the text in the middle of the nav bar*/
+    }
+
+    .nav-btn{
+        text-decoration: none;      /*removes the underline from the bottom of the buttons in the nav bar*/
+        color: black;             /*changes the color of the text in the nav bar*/
+        margin-right: 4vw;          /*sets spacing between the buttons in the nav bar*/
+    }
+
+    .nav-btn:hover{
+        color: #EDEDED;               /*sets the color of the button when you hover over it*/
+    }
+
+    /* set the position of dropdown */  
+    .drop {  
+        position: relative;  
+        display: inline-block;  
+        margin-left: 24vw;
+        padding-top: .6vw;
+        
+    }  
+    /* set the size and position of button on web */  
+    .drop-btn {  
+        padding: 10px 30px;  
+        font-size: 1.4vw;  
+        background-color: #FA7820;
+        border: none;
+    }  
+
+    .drop-btn:hover{
+        color: #EDEDED;
+    }
+    /* provide css to background of list items */   
+    #list-items {  
+        display: none;              /*default is set to not display. javasript function changes this value*/
+        position: absolute;         /*sets the postion of the dropdown outside of the section*/
+        background-color: #EDEDED;  
+        min-width: .74vw;
+    }  
+    /* provide css to list items */   
+    #list-items a {  
+        display: block;             
+        font-size: .8vw;  
+        background-color: #EDEDED;  
+        color: black;  
+        text-decoration: none;  
+        padding: .5vw;  
+    }  
+
+
+    /*-----------------------
+    ---SUGGESTIONS SECTION---
+    -----------------------*/
+
+    .section-suggestions {
+        padding: 3.84vw;                                                      /*sets the padding size for the main div element inside the section*/
+        background-color: #444444;                                          /*sets the background color for this entire section of the website*/
+        background: url(../Images/brandon-paul-ErH1LWnAKXg-unsplash.jpg);     /*picture used for the background*/
+        background-repeat: no-repeat;                                         /*keeps picture from repeating in the background*/
+        background-attachment: fixed;                                         /*sticks the picture and keeps it from moving with the rest of the page*/
+        background-position: center;                                          /*centers the picture in the background*/
+        background-size: cover;                                               /*fills the entire background with the entire picture*/
+        background-position-y: -22vw;                                         /*raise background picture above the frame of the website so that more of the car can be seen without parallax scrolling*/
+    }
+
+    .all-suggestions {                             /*div class that modifies the layout of the three 'suggestion' panels as a whole*/
+        max-width: 74vw;                           /*sets the maximum allowed width of the main div element. this allows for responsiveness in the main div*/
+        margin: 0 auto;                            /*sets the default margin size. most browsers set this to zero*/
+        display: grid;                             /*creates a grid that will be used to place all of the other div elements in the section*/
+        grid-template-columns: repeat(3, 1fr);     /*tells the grid that there will be three frames in the main grid*/
+        gap: 3.84vw;                               /*sets the gap between the three frames in the grid*/
+    }
+
+    .sugg {
+        font-size: 1.25vw;          /*sets the font size for the words in each div element*/
+        font-weight: 700;           /*sets the font thickness for the words in each div element*/
+        line-height: 1.05;          /*sets the verticl height for the lines that the words will be placed in each div element*/
+        letter-spacing: -0.3px;     /*space between each letter*/
+        place-items: center;        /**/
+    }
+
+    .sugg-title{
+        padding: 2vw;
+	padding-top: .6vw;
+	padding-bottom: .6vw;           /*-------------------------------------           /*--------------------------------------------------*/
+        margin-bottom: .2vw;
+        border-radius: .4vw .4vw 0 0;   /*makes top two corners round and bottom two corners square*/
+        background-color: #FA7820;    /*sets the background color of the title*/
+        text-align: center;             /*idk if this really does anything because of the padding. but it's supposed to set the words to be in the middle*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .sugg-desc{
+        padding: .6vw;                  /*sets default padding for description*/
+        font-size: 1vw;                 /*sets the font size for the description*/
+        font-weight: 400;               /*sets the font thickness*/
+        line-height: 1.4vw;             /*sets the vertical line height that the text will be placed in*/
+        margin-bottom: 1.6vw;           /*sets spacing between description and the learn more element*/
+        background-color: #EDEDED;    /*sets the background color for the description*/
+        border-radius: 0 0 .4vw .4vw;   /*makes top two corners square and bottom two corners round*/
+        text-align: center;             /*aligns the text in the center of the element*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .learn-more-form{
+        text-align: center;     /*places the learn more button in the center of each div element*/
+    }
+
+    .learn-more:link, .learn-more:visited{  /*sets the options for the unclicked and clicked version of the button*/
+        background-color: #171717;        /*sets the background color for the learn more buttons*/
+        font-size: .85vw;                   /*sets the font size of the 'learn more' text to 20 px*/
+        color: white;                     /*changes text color to white*/
+        padding: .7vw 1.2vw;                /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;                 /*makes the edge of the buttons round*/
+        text-decoration: none;              /*removes the underlines from a default link*/
+    }
+
+    .learn-more:hover{                      /*sets the options for the button when you hover over it with a cursor*/
+        background-color: #EDEDED;        /*sets the background color*/
+        font-size: .85vw;                   /*sets the font size of the 'learn more' text to 20 px*/
+        color: black;                     /*changes text color to white*/
+        padding: .7vw 1.2vw;                /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;                 /*makes the edge of the buttons round*/
+        text-decoration: none;              /*removes the underlines from a default link*/
+    }
+
+
+    /*-----------------
+    ---ABOUT SECTION---
+    -----------------*/
+
+    .section-about{
+        padding: 3.84vw;                /*the padding around the entire about section*/
+        background-color: #EDEDED;    /*sets the background color for this entire section of the website*/
+    }
+
+    .about-all{
+        max-width: 74vw;                /*sets maximum width for all elements in this section*/
+        margin: 0 auto;                 /*sets margin*/
+        display: flex;                  /*introduces a grid template for placing elements*/
+        flex-direction: row; /*sets up two columns for placing elements*/
+	gap: 3.84vw;                    /*sets gap in between the columns of the grid*/
+    }
+
+    .about-text{
+        font-size: 1.4vw;           /*sets the font size for the words in each div element*/
+        font-weight: 700;           /*sets the font thickness for the words in each div element*/
+        line-height: 1.05;          /*sets the verticl height for the lines that the words will be placed in each div element*/
+        letter-spacing: 0.5px;     /*space between each letter*/
+        text-align: center;         /*aligns the text in the middle of the description*/
+    }
+
+    .about-header{
+        padding-top: .6vw;          /*----------------------------------------------------*/
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        padding-bottom: 1.25vw;     /*--------------------------------------------------*/
+        text-align: center;         /*sets the words to be centered in the title element*/
+    }
+
+    .about-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1vw;             /*sets the font size for the description*/
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 1.6vw;         /*sets the vertical line height that the text will be placed in*/
+    }
+
+    .image-1{
+        margin-top: 2vw;
+        border-radius: .8vw;            /*makes the edges of the picture round in the about page*/
+        border: 3px solid #FA7820;    /*creates a 5px-thick border around the picture*/
+        max-width: 100%;                /*allows dynamic resizing of the image*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+
+    /*------------------------
+    ---TESTIMONIALS SECTION---
+    ------------------------*/
+
+    .section-testimonials{
+        padding: 3.84vw;                /*sets the padding size for the main div element inside the section*/
+        background-color: #444444;    /*sets the background color for this entire section of the website*/
+    }
+
+    .testimonials-all{
+        max-width: 74vw;                            /*maximum allowed width for the entire div element with all columns in it*/
+        margin: 0 auto;                             /*sets automatic margins*/
+    }
+
+    .testi-modules{
+        display: grid;                              /*tells the website that we will be displaying a grid in this section*/
+        grid-template-columns: repeat(3, 1fr);      /*splits the bottom section into 3 columns*/
+        gap: 3.84vw;                                /*sets the space between each of the columns*/
+    }
+
+    .testi-title{
+        font-size: 1.4vw;           /*sets the font size for the words in each div element*/
+        font-weight: 700;           /*sets the font thickness for the words in each div element*/
+        line-height: 1.05;          /*sets the verticl height for the lines that the words will be placed in each div element*/
+        letter-spacing: .1vw;     /*space between each letter*/
+        text-align: center;         /*aligns the text in the middle of the description*/
+        color: #EDEDED;           /*sets text color*/
+        margin-bottom: 3vw;         /*sets spacing between title and testimonial elements*/
+    }
+
+    .testi{
+        color: #EDEDED;                         /*sets the text color (in this case)*/
+        background-color: rgba(23,23,23, 0.4);  /*sets the color using rgb. "a" is used for percentage of opacity*/
+        border-radius: 1.6vw;                     /*rounds the corners of the background of the testimonial*/
+        padding: 1.6vw;                           /*sets padding for the description and header elements*/
+        text-align: center;                       /*sets the description and header in the middle(vertically) of each testi element*/
+        place-self: center;                       /*places the elements in the center of the div element. everything is relative to the elemtents inside the main div*/
+        border: 3px solid #FA7820;
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .testi-desc{
+        padding-left: .6vw;             /*sets default padding for description*/
+        padding-right: .6vw;            /*------------------------------------*/
+        padding-bottom: .6vw;           /*------------------------------------*/
+        font-size: .9vw;                /*sets the font size for the description*/
+        font-weight: 400;               /*sets the font thickness*/
+        line-height: 1.4vw;             /*sets the vertical line height that the text will be placed in*/
+        margin-bottom: .4vw;            /*sets spacing between description and the learn more element*/
+        text-align: center;             /*lines up the text in the middle of the description*/
+    }
+
+    .testi-header{
+        padding-top: .8vw;      /*padding for the name in the testimonial*/
+        padding-left: 4vw;      /*---------------------------------------*/
+        letter-spacing: .04vw;  /*simple letter spacing*/
+        font-weight: 500;       /*simple font weight*/
+        font-size: 1.4vw;       /*sets the font size for the words in each div element*/
+    }
+
+    .testi-img{
+        border-radius: 6vw;     /*makes the testimonial pictures round*/
+        max-width: 3.2vw;       /*sets size of the pictures*/
+    }
+
+    .testi-tag{
+        display: grid;                          /*sets the name and header into a grid layout*/
+        grid-template-columns: 1fr 1fr;         /*-------------------------------------------*/
+    }
+
+
+    /*------------------
+    ---FOOTER SECTION---
+    ------------------*/
+
+    .all-footer{
+        display: grid;                              /*sets up a grid for elements to be placed in*/
+        grid-template-columns: repeat(3, 1fr);      /*places three columns in the grid*/
+        background-color: #FA7820;                /*sets background color of footer*/
+        border-top-style: solid;
+        border-color: black;
+    }
+
+    .footer-section{
+        margin-top: .6vw;                         /*sets space for color between elements in footer and top edge of footer section*/
+        margin-bottom: .6vw;                      /*sets space for color between elements in footer and bottom edge of footer section*/
+        border-right: 1px solid #171717;        /*puts a line between sections in the footer*/
+        text-align: center;                       /*places text in the middle of each div section*/
+    }
+
+    .footer-button{
+        padding: 1vw;      /*sets sizing for the buttons in the footer (puts space in between buttons)*/
+    }
+
+    .footer-social{
+        padding: .40vw;
+    }
+
+    .link-style-bottom:hover{
+        color: #EDEDED;
+    }
+
+    .link-style-bottom{
+        color: #171717;                 /*sets the background color for the learn more buttons*/
+        font-size: .9vw;                  /*sets the font size of the 'learn more' text to 20 px*/
+        padding: .2vw 1.2vw;              /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;               /*makes the edge of the buttons round*/
+        text-decoration: none;            /*removes the underlines from a default link*/
+    }
+    
+    .link-style-bottom-social{
+    	color: #171717;                 /*sets the background color for the learn more buttons*/
+        font-size: .9vw;                  /*sets the font size of the 'learn more' text to 20 px*/
+        padding: .2vw 1.2vw;              /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;               /*makes the edge of the buttons round*/
+        text-decoration: none;            /*removes the underlines from a default link*/
+    }
+    
+    .link-style-bottom-social-small{
+    	display: none;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*------------------------------------------------------SERVICES PAGE------------------------------------------------------------*/
+
+
+    /*---------
+    ---TITLE---
+    ---------*/
+    .services-background{
+        background-color: #444444;
+
+    }
+
+    .services-title{
+        font-size: 3.5vw;
+        letter-spacing: .1vw;
+        text-align: center;
+        padding: 2vw;
+        color: #EDEDED;
+    }
+
+    /*------------------------
+    ---TRANSMISSION SECTION---
+    ------------------------*/
+    .section-transmission{
+        padding: 3.84vw;
+        background-color: #EDEDED;
+
+    }
+
+    .tran-all{
+        max-width: 74vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.84vw;;
+    }
+
+    .tran-txt{
+        max-width: 50vw;
+        color: #171717;
+        margin: 0 auto;
+        padding-top: 2vw;
+    }
+
+    .tran-title{
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 2vw;
+    }
+
+    .tran-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1vw;             /*sets the font size for the description*/
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 1.6vw;         /*sets the vertical line height that the text will be placed in*/
+        letter-spacing: .05vw;
+    }
+
+    .shift-knob{
+        border-radius: .8vw;            /*makes the edges of the picture round in the about page*/
+        border: 3px solid #FA7820;    /*creates a 5px-thick border around the picture*/
+        max-width: 100%;                /*allows dynamic resizing of the image*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+
+    /*------------------
+    ---ENGINE SECTION---
+    ------------------*/
+    .section-engine{
+        padding: 3.84vw;
+        background-color: #171717;
+
+    }
+
+    .eng-all{
+        max-width: 74vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.84vw;
+    }
+
+    .eng-img{
+        border-radius: .8vw;            /*makes the edges of the picture round in the about page*/
+        border: 3px solid #FA7820;    /*creates a 5px-thick border around the picture*/
+        max-width: 100%;                /*allows dynamic resizing of the image*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .eng-txt{
+        padding-top: 3vw;
+        color: #EDEDED;
+    }
+
+    .eng-title{
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 2vw;
+    }
+
+    .eng-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1vw;             /*sets the font size for the description*/
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 1.6vw;         /*sets the vertical line height that the text will be placed in*/
+        letter-spacing: .05vw;
+    }
+
+
+    /*---------------------
+    ---FULL AUTO SECTION---
+    ---------------------*/
+
+    .section-full{
+        padding: 3.84vw;
+        background-color: #444444;
+    }
+
+    .full-all{
+        max-width: 74vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.84vw;
+    }
+
+    .full-txt{
+        color: #EDEDED;
+        padding-top: 3vw;
+    }
+
+    .full-title{
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 2vw;
+    }
+
+    .full-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1vw;             /*sets the font size for the description*/
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 1.6vw;         /*sets the vertical line height that the text will be placed in*/
+        letter-spacing: .05vw;
+    }
+
+    .full-img{
+        border-radius: .8vw;            /*makes the edges of the picture round in the about page*/
+        border: 3px solid #FA7820;    /*creates a 5px-thick border around the picture*/
+        max-width: 100%;                /*allows dynamic resizing of the image*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    /*----------------------
+    ---ADDTIONAL SERVICES---
+    ----------------------*/
+
+    .section-add{
+        padding: 3.84vw;
+        background-color: #EDEDED;
+        border-top-style: solid;
+        border-color: black;
+    }
+
+    .add-all{
+        max-width: 74vw;
+        margin: 0 auto;
+        color: black;
+        letter-spacing: .05vw;
+    }
+
+    .add-title{
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 1.5vw;
+    }
+
+    .add-desc{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1vw;             /*sets the font size for the description*/
+        margin-left: 18vw;
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 1.6vw;         /*sets the vertical line height that the text will be placed in*/
+    }
+
+
+
+    /*-------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*------------------------------------------------------ABOUT PAGE------------------------------------------------------------*/
+
+    .about-section{
+        background-color: #444444;
+    }
+
+    .about-page-all{
+        max-width: 74vw;
+        margin: 0 auto;
+        display: flex;
+	flex-direction: column;
+        align-items: center;
+        padding: 3vw;
+    }
+
+    .about-top-title{
+    	background-color: #171717;
+    }
+
+    .about-tag{
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 3vw;
+    }
+    .contact-title{
+        font-size: 2.5vw;
+	text-align: center;
+	padding: 2vw;
+	color: #EDEDED;
+    }
+
+    .contact-header{
+        font-size: 2vw;
+        text-align: center;
+	background-color: #FA7820;
+	padding: 1vw;
+	border-radius: 1vw 1vw 0 0;
+    }
+
+    .about-page-body{
+        font-size: 1.5vw;
+        padding: 2vw;
+	background-color: #EDEDED;
+	border-radius: 0 0 1vw 1vw;
+	margin-top: .2vw;
+	line-height: 2vw;
+    }
+
+    .hours{
+        padding: .3vw;
+    }
+
+    .geo{
+        border-radius: .75vw;
+        max-width: 55vw;
+        max-height: 24vw;
+    }
+
+    .social-button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: .9vw;
+        padding-left: 7vw;
+    }
+
+    .social-icon{
+        max-width: 8%;
+    }
+    
+}   
+
+
+/*full screen style*/
+@media screen and (max-width: 1550px){
+
+    body{
+        font-family: sans-serif;    /*sets font for the body*/
+        line-height: 1;             /*sets the  verticle size of the lines the text will be placed in*/
+        font-weight: 400;           /*sets the thickness of the font used in the body*/
+        color: #171717;           /*sets the color of the text that will be written in the body*/
+    }
+	
+    /*-----------------------------------------------------INDEX PAGE----------------------------------------------------------------*/
+
+    /*------------------
+    ---HEADER SECTION---
+    ------------------*/
+    .all-header{
+        display: grid;                              /*splits the nav bar into three columns*/
+        grid-template-columns: repeat(3, 1fr);      /*-------------------------------------*/
+        background-color: #FA7820;                /*sets background color of nav bar*/
+        border-bottom-style: solid;
+        border-color: black;
+    }
+
+    .logo-link{
+        color: #171717;           /*sets color of words net to logo in nav bar*/
+        text-decoration: none;      /*removes the underline from the text in the logo link*/
+        max-width: 22vw;            /*removes "overflow" of link area. keeps the link only in the space that the words and logo take up*/
+    }
+
+    .logo-link:visited{
+        color: #171717;         /*sets color of link after visiting it*/
+        text-decoration: none;    /*removes underline of link after visiting it*/
+        max-width: 22vw;          /*keeps clickble link area only where the words and logo are shown*/
+    }
+
+    .nav-icon{
+        display: flex;            /*instead of grid, creating a flex layout*/
+        flex-direction: row;      /*sets the direction that elements will be placed in*/
+        align-items: center;      /*puts the items in the center horizontally*/
+    }
+
+    .nav-pic{
+        max-width: 20%;         /*sets the size of the picture*/
+        border-radius: 3vw;     /*makes the logo picture round*/
+    }
+
+    .nav-icon-txt{
+        font-size: 1.9vw;      /*sets the font size of the text in the logo link*/
+    }
+
+    .nav-btns{
+        font-size: 1.8vw;       /*sets the font size for all of the elements in the nav-btns section*/
+        margin: auto;           /*only sets the size of the main div to the size of the elements inside of it*/
+        margin-left: 4vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-btn{
+        text-decoration: none;      /*removes the underline from the bottom of the buttons in the nav bar*/
+        color: black;             /*changes the color of the text in the nav bar*/
+    }
+
+    .nav-btn:hover{
+        color: #EDEDED;               /*sets the color of the button when you hover over it*/
+    }
+
+    /* set the position of dropdown */  
+    .drop {  
+        position: relative;  
+        display: inline-block;  
+        padding-top: .4vw;
+        
+    }  
+    /* set the size and position of button on web */  
+    .drop-btn {  
+        padding: 10px 30px;  
+        font-size: 1.75vw;  
+        background-color: #FA7820;
+        border: none;
+    }  
+
+    .drop-btn:hover{
+        color: #EDEDED;
+    }
+    /* provide css to background of list items */   
+    #list-items {  
+        display: none;              /*default is set to not display. javasript function changes this value*/
+        position: absolute;         /*sets the postion of the dropdown outside of the section*/
+        background-color: #EDEDED;  
+        min-width: .74vw;
+    }  
+    /* provide css to list items */   
+    #list-items a {  
+        display: block;             
+        font-size: 1.25vw;  
+        background-color: #EDEDED;  
+        color: black;  
+        text-decoration: none;  
+        padding: .5vw;  
+    }  
+
+
+    /*-----------------------
+    ---SUGGESTIONS SECTION---
+    -----------------------*/
+
+    .section-suggestions {
+        padding: 3.84vw;                                                      /*sets the padding size for the main div element inside the section*/
+        background-color: #444444;                                          /*sets the background color for this entire section of the website*/
+        background: url(../Images/brandon-paul-ErH1LWnAKXg-unsplash.jpg);     /*picture used for the background*/
+        background-repeat: no-repeat;                                         /*keeps picture from repeating in the background*/
+        background-attachment: fixed;                                         /*sticks the picture and keeps it from moving with the rest of the page*/
+        background-position: center;                                          /*centers the picture in the background*/
+        background-size: cover;                                               /*fills the entire background with the entire picture*/
+        background-position-y: -22vw;                                         /*raise background picture above the frame of the website so that more of the car can be seen without parallax scrolling*/
+    }
+
+    .all-suggestions {                             /*div class that modifies the layout of the three 'suggestion' panels as a whole*/
+        max-width: 78.5vw;                           /*sets the maximum allowed width of the main div element. this allows for responsiveness in the main div*/
+        margin: 0 auto;                            /*sets the default margin size. most browsers set this to zero*/
+        display: grid;                             /*creates a grid that will be used to place all of the other div elements in the section*/
+        grid-template-columns: repeat(3, 1fr);     /*tells the grid that there will be three frames in the main grid*/
+        gap: 3.84vw;                               /*sets the gap between the three frames in the grid*/
+    }
+
+    .sugg {
+        font-size: 1.75vw;          /*sets the font size for the words in each div element*/
+        font-weight: 700;           /*sets the font thickness for the words in each div element*/
+        line-height: 1.05;          /*sets the verticl height for the lines that the words will be placed in each div element*/
+        letter-spacing: -0.3px;     /*space between each letter*/
+        place-items: center;        /**/
+    }
+
+    .sugg-title{
+        padding: 2vw;
+	    padding-top: .6vw;
+	    padding-bottom: .6vw;           /*-------------------------------------           /*--------------------------------------------------*/
+        margin-bottom: .2vw;
+        border-radius: .4vw .4vw 0 0;   /*makes top two corners round and bottom two corners square*/
+        background-color: #FA7820;    /*sets the background color of the title*/
+        text-align: center;             /*idk if this really does anything because of the padding. but it's supposed to set the words to be in the middle*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .sugg-desc{
+        padding: .6vw;                  /*sets default padding for description*/
+        font-size: 1.6vw;                 /*sets the font size for the description*/
+        font-weight: 400;               /*sets the font thickness*/
+        line-height: 2vw;             /*sets the vertical line height that the text will be placed in*/
+        margin-bottom: 2.5vw;           /*sets spacing between description and the learn more element*/
+        background-color: #EDEDED;    /*sets the background color for the description*/
+        border-radius: 0 0 .4vw .4vw;   /*makes top two corners square and bottom two corners round*/
+        text-align: center;             /*aligns the text in the center of the element*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .learn-more-form{
+        text-align: center;     /*places the learn more button in the center of each div element*/
+    }
+
+    .learn-more:link, .learn-more:visited{  /*sets the options for the unclicked and clicked version of the button*/
+        background-color: #171717;        /*sets the background color for the learn more buttons*/
+        font-size: 1.5vw;                   /*sets the font size of the 'learn more' text to 20 px*/
+        color: white;                     /*changes text color to white*/
+        padding: 1vw 1.5vw;                /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;                 /*makes the edge of the buttons round*/
+        text-decoration: none;              /*removes the underlines from a default link*/
+    }
+
+    .learn-more:hover{                      /*sets the options for the button when you hover over it with a cursor*/
+        background-color: #EDEDED;        /*sets the background color*/
+        font-size: 1.5vw;                   /*sets the font size of the 'learn more' text to 20 px*/
+        color: black;                     /*changes text color to white*/
+        padding: 1vw 1.5vw;                /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;                 /*makes the edge of the buttons round*/
+        text-decoration: none;              /*removes the underlines from a default link*/
+    }
+
+
+    /*-----------------
+    ---ABOUT SECTION---
+    -----------------*/
+
+    .section-about{
+        padding: 3.84vw;                /*the padding around the entire about section*/
+        background-color: #EDEDED;    /*sets the background color for this entire section of the website*/
+    }
+
+    .about-all{
+        max-width: 78.5vw;                /*sets maximum width for all elements in this section*/
+        margin: 0 auto;                 /*sets margin*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+	    gap: 3.84vw;                    /*sets gap in between the columns of the grid*/
+    }
+
+    .about-text{
+        font-size: 2vw;           /*sets the font size for the words in each div element*/
+        font-weight: 700;           /*sets the font thickness for the words in each div element*/
+        line-height: 1.05;          /*sets the verticl height for the lines that the words will be placed in each div element*/
+        letter-spacing: 0.5px;     /*space between each letter*/
+        text-align: center;         /*aligns the text in the middle of the description*/
+    }
+
+    .about-header{
+        padding-top: .6vw;          /*----------------------------------------------------*/
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        padding-bottom: 1.25vw;     /*--------------------------------------------------*/
+        text-align: center;         /*sets the words to be centered in the title element*/
+    }
+
+    .about-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1.6vw;             /*sets the font size for the description*/
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 2vw;         /*sets the vertical line height that the text will be placed in*/
+    }
+
+    .image-1{
+        margin-top: 2vw;
+        border-radius: .8vw;            /*makes the edges of the picture round in the about page*/
+        border: 3px solid #FA7820;    /*creates a 5px-thick border around the picture*/
+        max-width: 100%;                /*allows dynamic resizing of the image*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+
+    /*------------------------
+    ---TESTIMONIALS SECTION---
+    ------------------------*/
+
+    .section-testimonials{
+        padding: 3.84vw;                /*sets the padding size for the main div element inside the section*/
+        background-color: #444444;    /*sets the background color for this entire section of the website*/
+    }
+
+    .testimonials-all{
+        max-width: 78.5vw;                            /*maximum allowed width for the entire div element with all columns in it*/
+        margin: 0 auto;                             /*sets automatic margins*/
+    }
+
+    .testi-modules{
+        display: grid;                              /*tells the website that we will be displaying a grid in this section*/
+        grid-template-columns: repeat(3, 1fr);      /*splits the bottom section into 3 columns*/
+        gap: 3.84vw;                                /*sets the space between each of the columns*/
+    }
+
+    .testi-title{
+        font-size: 1.75vw;           /*sets the font size for the words in each div element*/
+        font-weight: 700;           /*sets the font thickness for the words in each div element*/
+        line-height: 1.05;          /*sets the verticl height for the lines that the words will be placed in each div element*/
+        letter-spacing: .1vw;     /*space between each letter*/
+        text-align: center;         /*aligns the text in the middle of the description*/
+        color: #EDEDED;           /*sets text color*/
+        margin-bottom: 3vw;         /*sets spacing between title and testimonial elements*/
+    }
+
+    .testi{
+        color: #EDEDED;                         /*sets the text color (in this case)*/
+        background-color: rgba(23,23,23, 0.4);  /*sets the color using rgb. "a" is used for percentage of opacity*/
+        border-radius: 1.6vw;                     /*rounds the corners of the background of the testimonial*/
+        padding: 1.6vw;                           /*sets padding for the description and header elements*/
+        text-align: center;                       /*sets the description and header in the middle(vertically) of each testi element*/
+        place-self: center;                       /*places the elements in the center of the div element. everything is relative to the elemtents inside the main div*/
+        border: 3px solid #FA7820;
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .testi-desc{
+        padding-left: .6vw;             /*sets default padding for description*/
+        padding-right: .6vw;            /*------------------------------------*/
+        padding-bottom: .6vw;           /*------------------------------------*/
+        font-size: 1.6vw;                /*sets the font size for the description*/
+        font-weight: 400;               /*sets the font thickness*/
+        line-height: 2vw;             /*sets the vertical line height that the text will be placed in*/
+        margin-bottom: .4vw;            /*sets spacing between description and the learn more element*/
+        text-align: center;             /*lines up the text in the middle of the description*/
+    }
+
+    .testi-header{
+        padding-top: .8vw;      /*padding for the name in the testimonial*/
+        padding-left: 4vw;      /*---------------------------------------*/
+        letter-spacing: .04vw;  /*simple letter spacing*/
+        font-weight: 500;       /*simple font weight*/
+        font-size: 1.6vw;       /*sets the font size for the words in each div element*/
+    }
+
+    .testi-img{
+        border-radius: 6vw;     /*makes the testimonial pictures round*/
+        max-width: 3.2vw;       /*sets size of the pictures*/
+    }
+
+    .testi-tag{
+        display: grid;                          /*sets the name and header into a grid layout*/
+        grid-template-columns: 1fr 1fr;         /*-------------------------------------------*/
+    }
+
+
+    /*------------------
+    ---FOOTER SECTION---
+    ------------------*/
+
+    .all-footer{
+        display: grid;                              /*sets up a grid for elements to be placed in*/
+        grid-template-columns: repeat(3, 1fr);      /*places three columns in the grid*/
+        background-color: #FA7820;                /*sets background color of footer*/
+        border-top-style: solid;
+        border-color: black;
+    }
+
+    .footer-section{
+        margin-top: .6vw;                         /*sets space for color between elements in footer and top edge of footer section*/
+        margin-bottom: .6vw;                      /*sets space for color between elements in footer and bottom edge of footer section*/
+        border-right: 1px solid #171717;        /*puts a line between sections in the footer*/
+        text-align: center;                       /*places text in the middle of each div section*/
+    }
+
+    .footer-button{
+        padding: 1vw;      /*sets sizing for the buttons in the footer (puts space in between buttons)*/
+    }
+
+    .footer-social{
+        padding: .40vw;
+    }
+
+    .link-style-bottom:hover{
+        color: #EDEDED;
+    }
+
+    .link-style-bottom{
+        color: #171717;                 /*sets the background color for the learn more buttons*/
+        font-size: 1.6vw;                  /*sets the font size of the 'learn more' text to 20 px*/
+        padding: .5vw 1.5vw;              /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;               /*makes the edge of the buttons round*/
+        text-decoration: none;            /*removes the underlines from a default link*/
+    }
+    
+    .link-style-bottom-social{
+    	color: #171717;                 /*sets the background color for the learn more buttons*/
+        font-size: 1.6vw;                  /*sets the font size of the 'learn more' text to 20 px*/
+        padding: .5vw 1.5vw;              /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;               /*makes the edge of the buttons round*/
+        text-decoration: none;            /*removes the underlines from a default link*/
+    }
+    
+    .link-style-bottom-social-small{
+    	display: none;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*------------------------------------------------------SERVICES PAGE------------------------------------------------------------*/
+
+
+    /*---------
+    ---TITLE---
+    ---------*/
+    .services-background{
+        background-color: #444444;
+
+    }
+
+    .services-title{
+        font-size: 3.5vw;
+        letter-spacing: .1vw;
+        text-align: center;
+        padding: 2vw;
+        color: #EDEDED;
+    }
+
+    /*------------------------
+    ---TRANSMISSION SECTION---
+    ------------------------*/
+    .section-transmission{
+        padding: 3.84vw;
+        background-color: #EDEDED;
+
+    }
+
+    .tran-all{
+        max-width: 78.5vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        gap: 3.84vw;
+        align-items: center;
+    }
+
+    .tran-txt{
+        max-width: 50vw;
+        color: #171717;
+        margin: 0 auto;
+        padding-top: 2vw;
+    }
+
+    .tran-title{
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 2.75vw;
+    }
+
+    .tran-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1.5vw;             /*sets the font size for the description*/
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 2vw;         /*sets the vertical line height that the text will be placed in*/
+        letter-spacing: .05vw;
+    }
+
+    .shift-knob{
+        border-radius: .8vw;            /*makes the edges of the picture round in the about page*/
+        border: 3px solid #FA7820;    /*creates a 5px-thick border around the picture*/
+        max-width: 100%;                /*allows dynamic resizing of the image*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+
+    /*------------------
+    ---ENGINE SECTION---
+    ------------------*/
+    .section-engine{
+        padding: 3.84vw;
+        background-color: #171717;
+
+    }
+
+    .eng-all{
+        max-width: 78.5vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4.5vw;
+    }
+
+    .eng-img{
+        border-radius: .8vw;            /*makes the edges of the picture round in the about page*/
+        border: 3px solid #FA7820;    /*creates a 5px-thick border around the picture*/
+        max-width: 100%;                /*allows dynamic resizing of the image*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .eng-txt{
+        color: #EDEDED;
+    }
+
+    .eng-title{
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 2.75vw;
+    }
+
+    .eng-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1.5vw;             /*sets the font size for the description*/
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 2vw;         /*sets the vertical line height that the text will be placed in*/
+        letter-spacing: .05vw;
+    }
+
+
+    /*---------------------
+    ---FULL AUTO SECTION---
+    ---------------------*/
+
+    .section-full{
+        padding: 3.84vw;
+        background-color: #444444;
+    }
+
+    .full-all{
+        max-width: 78.5vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4.5vw;
+        align-items: center;
+    }
+
+    .full-txt{
+        color: #EDEDED;
+    }
+
+    .full-title{
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 2.75vw;
+    }
+
+    .full-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1.5vw;             /*sets the font size for the description*/
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 2vw;         /*sets the vertical line height that the text will be placed in*/
+        letter-spacing: .05vw;
+    }
+
+    .full-img{
+        border-radius: .8vw;            /*makes the edges of the picture round in the about page*/
+        border: 3px solid #FA7820;    /*creates a 5px-thick border around the picture*/
+        max-width: 100%;                /*allows dynamic resizing of the image*/
+        box-shadow: 10px 10px 10px #171717;
+        float: right;
+    }
+
+    /*----------------------
+    ---ADDTIONAL SERVICES---
+    ----------------------*/
+
+    .section-add{
+        padding: 3.84vw;
+        background-color: #EDEDED;
+        border-top-style: solid;
+        border-color: black;
+    }
+
+    .add-all{
+        max-width: 78.5vw;
+        margin: 0 auto;
+        color: black;
+        letter-spacing: .05vw;
+    }
+
+    .add-title{
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 2vw;
+    }
+
+    .add-desc{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 2vw;         /*helps spacing between the title and description elements*/
+        font-size: 1.5vw;             /*sets the font size for the description*/
+        margin-left: 18vw;
+        font-weight: 400;           /*sets the font thickness*/
+        line-height: 2vw;         /*sets the vertical line height that the text will be placed in*/
+    }
+
+
+
+    /*-------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*------------------------------------------------------ABOUT PAGE------------------------------------------------------------*/
+
+    .about-section{
+        background-color: #444444;
+    }
+
+    .about-page-all{
+        max-width: 74vw;
+        margin: 0 auto;
+        display: flex;
+	    flex-direction: column;
+        align-items: center;
+        padding: 3vw;
+    }
+
+    .about-top-title{
+    	background-color: #171717;
+    }
+
+    .about-tag{
+	    text-align: center;
+	    margin: 0 auto;
+	    margin-bottom: 3vw;
+    }
+    .contact-title{
+        font-size: 2.5vw;
+	    text-align: center;
+	    padding: 2vw;
+	    color: #EDEDED;
+    }
+
+    .contact-header{
+        font-size: 2vw;
+        text-align: center;
+	    background-color: #FA7820;
+	    padding: 1vw;
+	    border-radius: 1vw 1vw 0 0;
+    }
+
+    .about-page-body{
+        font-size: 2vw;
+        padding: 2vw;
+	    background-color: #EDEDED;
+	    border-radius: 0 0 1vw 1vw;
+	    margin-top: .2vw;
+	    line-height: 2vw;
+    }
+
+    .hours{
+        padding: .3vw;
+    }
+
+    .geo{
+        border-radius: .75vw;
+        max-width: 55vw;
+        max-height: 24vw;
+    }
+
+    .social-button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: .9vw;
+        padding-left: 7vw;
+    }
+
+    .social-icon{
+        max-width: 8%;
+    }
+    
+}   
+
+
+/*phone screen style*/
+@media screen and (max-width: 1049px){ /*use 450px for this*/
+
+    body{
+        font-family: sans-serif;    /*sets font for the body*/
+        line-height: 1;             /*sets the  verticle size of the lines the text will be placed in*/
+        font-weight: 400;           /*sets the thickness of the font used in the body*/
+        color: #171717;           /*sets the color of the text that will be written in the body*/
+    }	
+
+	/*-----------------------------------------------------INDEX PAGE----------------------------------------------------------------*/
+
+    /*------------------
+    ---HEADER SECTION---
+    ------------------*/
+    .all-header{
+        display: flex;                              /*splits the nav bar into three columns*/
+        align-items: center;
+        background-color: #FA7820;                /*sets background color of nav bar*/
+        border-bottom-style: solid;
+        border-color: black;
+    }
+
+    .logo-link{
+        color: #171717;           /*sets color of words net to logo in nav bar*/
+        text-decoration: none;      /*removes the underline from the text in the logo link*/
+        max-width: 15vw;            /*removes "overflow" of link area. keeps the link only in the space that the words and logo take up*/
+    }
+
+    .logo-link:visited{
+        color: #171717;         /*sets color of link after visiting it*/
+        text-decoration: none;    /*removes underline of link after visiting it*/
+        max-width: 15vw;          /*keeps clickble link area only where the words and logo are shown*/
+    }
+
+    .nav-pic{
+        max-width: 100%;         /*sets the size of the picture*/
+        border-radius: 3vw;     /*makes the logo picture round*/
+    }
+
+    .nav-icon-txt{
+        display: none;
+    }
+
+    .nav-btns{
+        font-size: 5vw;       /*sets the font size for all of the elements in the nav-btns section*/
+        margin: auto;           /*only sets the size of the main div to the size of the elements inside of it*/
+    }
+
+    .nav-btn{
+        text-decoration: none;      /*removes the underline from the bottom of the buttons in the nav bar*/
+        color: black;             /*changes the color of the text in the nav bar*/
+        margin-right: 4vw;          /*sets spacing between the buttons in the nav bar*/
+    }
+
+    .nav-btn:hover{
+        color: #EDEDED;               /*sets the color of the button when you hover over it*/
+    }
+
+    /* set the position of dropdown */  
+    .drop {  
+        position: relative;  
+        display: none;
+        
+    }  
+    /* set the size and position of button on web */  
+    .drop-btn {  
+        padding: 10px 30px;  
+        font-size: 1.4vw;  
+        background-color: #FA7820;
+        border: none;
+    }  
+
+    .drop-btn:hover{
+        color: #EDEDED;
+    }
+    /* provide css to background of list items */   
+    #list-items {  
+        display: none;              /*default is set to not display. javasript function changes this value*/
+        position: absolute;         /*sets the postion of the dropdown outside of the section*/
+        background-color: #EDEDED;  
+        min-width: .74vw;
+    }  
+    /* provide css to list items */   
+    #list-items a {  
+        display: block;             
+        font-size: .8vw;  
+        background-color: #EDEDED;  
+        color: black;  
+        text-decoration: none;  
+        padding: .5vw;  
+    }  
+
+
+    /*-----------------------
+    ---SUGGESTIONS SECTION---
+    -----------------------*/
+
+    .section-suggestions {
+        padding: 3.84vw;                                                      /*sets the padding size for the main div element inside the section*/
+        background-color: #444444;                                          /*sets the background color for this entire section of the website*/
+        background: url(../Images/brandon-paul-ErH1LWnAKXg-unsplash.jpg);     /*picture used for the background*/
+        background-repeat: no-repeat;                                         /*keeps picture from repeating in the background*/
+        background-attachment: fixed;                                         /*sticks the picture and keeps it from moving with the rest of the page*/
+        background-position: center;                                          /*centers the picture in the background*/
+        background-size: cover;                                               /*fills the entire background with the entire picture*/
+    }
+
+    .all-suggestions {                             /*div class that modifies the layout of the three 'suggestion' panels as a whole*/
+        max-width: 85vw;                           /*sets the maximum allowed width of the main div element. this allows for responsiveness in the main div*/
+        margin: 0 auto;                            /*sets the default margin size. most browsers set this to zero*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sugg {
+        font-size: 5vw;          /*sets the font size for the words in each div element*/
+        font-weight: 300;           /*sets the font thickness for the words in each div element*/
+        line-height: 1.75;          /*sets the verticl height for the lines that the words will be placed in each div element*/
+        place-items: center;        /**/
+    }
+
+    .sugg-title{
+        padding-top: .6vw;              /*----------------------------------------------------*/
+        padding-left: 2vw;              /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        padding-bottom: .6vw;           /*--------------------------------------------------*/
+        margin-bottom: .2vw;            /*sets spacing between the title and body elements*/
+        border-radius: 2vw 2vw 0 0;   /*makes top two corners round and bottom two corners square*/
+        background-color: #FA7820;    /*sets the background color of the title*/
+        text-align: center;             /*idk if this really does anything because of the padding. but it's supposed to set the words to be in the middle*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .sugg-desc{
+        padding: 4vw;                  /*sets default padding for description*/
+        font-size: 5vw;                 /*sets the font size for the description*/
+        font-weight: 400;               /*sets the font thickness*/
+        line-height: 7vw;             /*sets the vertical line height that the text will be placed in*/
+        margin-bottom: 5vw;           /*sets spacing between description and the learn more element*/
+        background-color: #EDEDED;    /*sets the background color for the description*/
+        border-radius: 0 0 2vw 2vw;   /*makes top two corners square and bottom two corners round*/
+        text-align: center;             /*aligns the text in the center of the element*/
+        box-shadow: 10px 10px 10px #171717;
+    }
+
+    .learn-more-form{
+        text-align: center;     /*places the learn more button in the center of each div element*/
+        margin-bottom: 8vw;
+        font-weight: 525;
+    }
+
+    .learn-more:link, .learn-more:visited{  /*sets the options for the unclicked and clicked version of the button*/
+        background-color: #171717;        /*sets the background color for the learn more buttons*/
+        font-size: 5vw;                   /*sets the font size of the 'learn more' text to 20 px*/
+        color: white;                     /*changes text color to white*/
+        padding: 1.5vw 2.4vw;                /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;                 /*makes the edge of the buttons round*/
+        text-decoration: none;              /*removes the underlines from a default link*/
+
+    }
+
+    .learn-more:hover{                      /*sets the options for the button when you hover over it with a cursor*/
+        background-color: #EDEDED;        /*sets the background color*/
+        font-size: 5vw;                   /*sets the font size of the 'learn more' text to 20 px*/
+        color: black;                     /*changes text color to white*/
+        padding: 1.5vw 2.4vw;                /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;                 /*makes the edge of the buttons round*/
+        text-decoration: none;              /*removes the underlines from a default link*/
+    }
+
+
+    /*-----------------
+    ---ABOUT SECTION---
+    -----------------*/
+
+    .section-about{
+        padding: 3.84vw;                /*the padding around the entire about section*/
+        background-color: #EDEDED;    /*sets the background color for this entire section of the website*/
+    }
+
+    .about-all{
+        max-width: 85vw;                /*sets maximum width for all elements in this section*/
+        margin: 3vw;                 /*sets margin*/
+        margin-bottom: 8vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-text{
+        font-size: 5vw;           /*sets the font size for the words in each div element*/
+        font-weight: 525;           /*sets the font thickness for the words in each div element*/
+        line-height: 6vw;          /*sets the verticl height for the lines that the words will be placed in each div element*/
+        text-align: center;         /*aligns the text in the middle of the description*/
+    }
+
+    .about-header{
+        padding-top: 5vw;          /*----------------------------------------------------*/
+        padding-bottom: 5vw;     /*--------------------------------------------------*/
+        text-align: center;         /*sets the words to be centered in the title element*/
+    }
+
+    .about-desc{
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-size: 4vw;
+        font-weight: 400;
+        line-height: 6vw;
+    }
+
+    .image-1{
+        margin-top: 1vw;
+        border-radius: .8vw;            /*makes the edges of the picture round in the about page*/
+        border: 3px solid #FA7820;    /*creates a 5px-thick border around the picture*/
+        max-width: 100%;                /*allows dynamic resizing of the image*/
+        box-shadow: 10px 10px 10px #171717;
+        display: none;
+        
+    }
+
+
+    /*------------------------
+    ---TESTIMONIALS SECTION---
+    ------------------------*/
+
+    .section-testimonials{
+        padding: 3.84vw;                /*sets the padding size for the main div element inside the section*/
+        background-color: #444444;    /*sets the background color for this entire section of the website*/
+        display: none;
+    }
+
+    .testimonials-all{
+        max-width: 85vw;                            /*maximum allowed width for the entire div element with all columns in it*/
+        margin: 0 auto;                             /*sets automatic margins*/
+    }
+
+    .testi-modules{
+
+    }
+
+    .testi-title{
+        font-size: 5vw;           /*sets the font size for the words in each div element*/
+        font-weight: 525;           /*sets the font thickness for the words in each div element*/
+        line-height: 7vw;          /*sets the verticl height for the lines that the words will be placed in each div element*/
+        text-align: center;         /*aligns the text in the middle of the description*/
+        color: #EDEDED;           /*sets text color*/
+        margin-top: 5vw;
+        margin-bottom: 8vw;
+    }
+
+    .testi{
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+        color: #EDEDED;                         /*sets the text color (in this case)*/
+        background-color: rgba(23,23,23, 0.4);  /*sets the color using rgb. "a" is used for percentage of opacity*/
+        border-radius: 1.6vw;                     /*rounds the corners of the background of the testimonial*/
+        padding: 1.6vw;                           /*sets padding for the description and header elements*/
+        text-align: center;                       /*sets the description and header in the middle(vertically) of each testi element*/
+        place-self: center;                       /*places the elements in the center of the div element. everything is relative to the elemtents inside the main div*/
+        border: 3px solid #FA7820;
+        box-shadow: 10px 10px 10px #171717;
+        margin-bottom: 8vw;
+    }
+
+    .testi-desc{
+        padding: 3vw;
+        font-size: 4vw;                /*sets the font size for the description*/
+        font-weight: 400;               /*sets the font thickness*/
+        line-height: 5vw;             /*sets the vertical line height that the text will be placed in*/
+        margin-bottom: .4vw;            /*sets spacing between description and the learn more element*/
+        text-align: center;             /*lines up the text in the middle of the description*/
+    }
+
+    .testi-header{
+        padding-top: .8vw;      /*padding for the name in the testimonial*/
+        padding-left: 4vw;      /*---------------------------------------*/
+        letter-spacing: .04vw;  /*simple letter spacing*/
+        font-weight: 500;       /*simple font weight*/
+        font-size: 6vw;       /*sets the font size for the words in each div element*/
+    }
+
+    .testi-img{
+        border-radius: 6vw;     /*makes the testimonial pictures round*/
+        max-width: 8vw;       /*sets size of the pictures*/
+    }
+
+    .testi-tag{
+        display: flex;
+        flex-direction: row;
+        padding: 3vw;
+        gap: 1.5vw;
+    }
+
+
+    /*------------------
+    ---FOOTER SECTION---
+    ------------------*/
+
+    .all-footer{
+        display: grid;                              /*sets up a grid for elements to be placed in*/
+        grid-template-columns: repeat(2, 1fr);      /*places three columns in the grid*/
+        background-color: #FA7820;                /*sets background color of footer*/
+        border-top-style: solid;
+        border-color: black;
+    }
+
+    .footer-section{
+        margin-top: 4vw;                         /*sets space for color between elements in footer and top edge of footer section*/
+        margin-bottom: 1vw;                      /*sets space for color between elements in footer and bottom edge of footer section*/
+        border-right: 1px solid #171717;        /*puts a line between sections in the footer*/
+        text-align: center;                       /*places text in the middle of each div section*/
+    }
+
+    .footer-button{
+        padding: 1vw;      /*sets sizing for the buttons in the footer (puts space in between buttons)*/
+        padding-bottom: 2vw;
+        padding-top: 2vw;
+    }
+
+    .footer-social{
+    	display: none;
+    }
+
+    .link-style-bottom:hover{
+        color: #EDEDED;
+    }
+
+    .link-style-bottom{
+        color: #171717;                 /*sets the background color for the learn more buttons*/
+        font-size: 3.5vw;                  /*sets the font size of the 'learn more' text to 20 px*/
+        padding: .2vw 1.2vw;              /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;               /*makes the edge of the buttons round*/
+        text-decoration: none;            /*removes the underlines from a default link*/
+    }
+    .link-style-bottom-social{
+    }
+    
+    .link-style-bottom-social-small{
+        color: #171717;                 /*sets the background color for the learn more buttons*/
+        font-size: 3.5vw;                  /*sets the font size of the 'learn more' text to 20 px*/
+        padding: .2vw 1.2vw;              /*sets top and bottom padding for the learn more text inside the button*/
+        border-radius: 2vw;               /*makes the edge of the buttons round*/
+        text-decoration: none;            /*removes the underlines from a default link*/
+    }
+    
+    .link-style-bottom-social-small:hover{
+        color: #EDEDED;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*------------------------------------------------------SERVICES PAGE------------------------------------------------------------*/
+
+
+    /*---------
+    ---TITLE---
+    ---------*/
+    .services-background{
+        background-color: #444444;
+        padding: 5vw;
+        text-align: center;
+    }
+
+    .services-title{
+        font-size: 14vw;
+        margin-bottom: 2vw;
+        color: #EDEDED;
+    }
+
+    /*------------------------
+    ---TRANSMISSION SECTION---
+    ------------------------*/
+    .section-transmission{
+        background-color: #EDEDED;
+        background: url(../Images/pexels-malte-luk-2244746.jpg);     /*picture used for the background*/
+        background-repeat: no-repeat;                                         /*keeps picture from repeating in the background*/
+        background-attachment: fixed;                                         /*sticks the picture and keeps it from moving with the rest of the page*/
+        background-position: center;                                          /*centers the picture in the background*/
+        background-size: cover;                                              /*fills the entire background with the entire picture*/
+    }
+
+    .tran-all{
+        padding-bottom: 8vw;
+	    padding-top: 6vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 78.5vw;
+    }
+
+    .tran-txt{
+        color: #EDEDED;
+        text-shadow: 2px 2px rgb(0,0,0);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tran-title{
+        margin-bottom: 3vw;
+        font-size: 8vw;
+    }
+
+    .tran-desc{
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-weight: 400;           /*sets the font thickness*/
+        font-size: 6vw;
+        letter-spacing: .05vw;
+        line-height: 6vw;
+        width: 78.5vw;
+    }
+
+    .shift-knob{
+        display: none;
+    }
+
+
+    /*------------------
+    ---ENGINE SECTION---
+    ------------------*/
+    .section-engine{
+        padding: 3.84vw;
+        background-color: #171717;
+
+    }
+
+    .eng-all{
+        max-width: 85vw;
+        margin: 0 auto;
+        font-size: 5vw;
+        line-height: 6.5vw;
+        padding-bottom: 8vw;
+        padding-top: 6vw;
+    }
+
+    .eng-img{
+        display: none;
+    }
+
+    .eng-txt{
+        padding-top: 5vw;
+        color: #EDEDED;
+    }
+
+    .eng-title{
+        padding-left: 2vw;          /*sets the padding for each side of the title section*/
+        padding-right: 2vw;
+        margin-bottom: 3vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 8vw;
+        line-height: 10vw;
+    }
+
+    .eng-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-weight: 400;           /*sets the font thickness*/
+        font-size: 6vw;
+        line-height: 6vw;
+        letter-spacing: .05vw;
+        text-align: center;
+    }
+
+
+    /*---------------------
+    ---FULL AUTO SECTION---
+    ---------------------*/
+
+    .section-full{
+        padding: 3.84vw;
+        background-color: #444444;
+    }
+
+    .full-all{
+        max-width: 85vw;
+        margin: 0 auto;
+        font-size: 5vw;
+        line-height: 6.5vw;
+        padding-bottom: 8vw;
+        padding-top: 6vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .full-img{
+        display: none;
+    }
+
+    .full-txt{
+        padding-top: 5vw;
+        color: #EDEDED;
+    }
+
+    .full-title{
+        padding: 2vw;
+        margin-bottom: 3vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 8vw;
+        line-height: 10vw;
+    }
+
+    .full-desc{
+        padding: .6vw;              /*sets default padding for description*/
+        padding-top: 1.2vw;         /*helps spacing between the title and description elements*/
+        font-weight: 400;           /*sets the font thickness*/
+        font-size: 6vw;
+        line-height: 6vw;
+        letter-spacing: .05vw;
+        text-align: center;
+    }
+
+    /*----------------------
+    ---ADDTIONAL SERVICES---
+    ----------------------*/
+
+    .section-add{
+        padding: 3.84vw;
+        background-color: #EDEDED;
+        border-top-style: solid;
+        border-color: black;
+    }
+
+    .add-all{
+	    max-width: 85vw;
+        margin: 0 auto;
+        font-size: 5vw;
+        line-height: 6.5vw;
+        padding-bottom: 8vw;
+        padding-top: 6vw;
+    }
+
+    .add-title{
+        padding: 2vw;
+        text-align: center;         /*sets the words to be centered in the title element*/
+        font-size: 6vw;
+	    line-height: 10vw;
+	    padding-bottom: 3vw;
+    }
+
+    .add-desc{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+	    margin-left: 5vw;
+        padding-top: 2vw;         /*helps spacing between the title and description elements*/
+        font-weight: 400;           /*sets the font thickness*/
+        font-size: 5vw;
+        line-height: 6vw;
+        gap: 13vw;
+    }
+
+
+
+    /*-------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*------------------------------------------------------ABOUT PAGE------------------------------------------------------------*/
+
+    .about-section{
+        background-color: #444444;
+    }
+    
+    .about-top-title{
+    	background-color: #171717;
+    	padding: 5vw;
+    }
+
+    .about-page-all{
+        max-width: 85vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3vw;
+        padding-top: 8vw;
+        padding-bottom: 10vw;
+    }
+
+    .contact-title{
+        font-size: 8vw;
+        color: white;
+    }
+
+    .contact-us h1{
+	    color: #EDEDED;
+    }
+
+    .about-tag{
+    	text-align: center;
+	    margin-bottom: 4vw;
+    }
+
+    .contact-header{
+        font-size: 7vw;
+        margin-bottom: 1vw;
+        margin-top: 2vw;
+	    background-color: #FA7820;
+	    border-radius: 1vw 1vw 0 0;
+	    padding: 2vw;
+    }
+
+    .about-page-body{
+        font-size: 4.5vw;
+        margin-bottom: 8vw;
+	    border-radius: 0 0 1vw 1vw;
+	    background-color: #EDEDED;
+	    margin: 0 auto;
+        line-height: 5vw;
+	    padding: 5vw;
+    }
+
+    .hours{
+        padding: .3vw;
+    }
+
+    .geo{
+        border-radius: 2vw;
+        max-width: 90vw;
+        max-height: 50vw;
+    }
+
+    .social-button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: .9vw;
+        padding-left: 7vw;
+    }
+
+    .social-icon{
+        max-width: 8%;
+    }
+}
