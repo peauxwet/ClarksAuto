@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clark's Auto Repair</title>
+
+        <link rel="stylesheet" href="CSS/stylesheet-1.css"/>
+
+        <link rel="icon" href="images/favicon/favicon-16x16.png">
+    </head>
+    <body>
+        <!--This is the nagivation bar-->
+        <header>
+            <div class="all-header">
+                <a href="index.html" class="logo-link">
+                    <div class="nav-icon">
+                        <img src="Images/wrench logo_adobespark.png" class="nav-pic">
+                        <h1 class="nav-icon-txt">Clark's Auto Repair</h1>
+                    </div>
+                </a>
+                <div class="nav-btns">
+                    <a href="index.html" class="nav-btn">Home</a>
+                    <a href="services.html" class="nav-btn">Services</a>
+                    <a href="about.html" class="nav-btn">Contact</a>
+                </div>
+                <div class="drop">
+                    <button class="drop-btn" onclick="show_hide()">Sponsors</button>
+                    <div id="list-items">
+                        <a href="https://www.toyotires.com/" target="_blank">Toyo Tires</a>
+                        <a href="https://shop.advanceautoparts.com/" target="_blank">Advance Auto Parts</a>
+                        <a href="https://www.sunoco.com/" target="_blank">Sunoco</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <script>
+            function show_hide(){
+                var click = document.getElementById("list-items");
+                if(click.style.display === "none"){
+                    click.style.display = "block";
+                }   else{
+                        click.style.display = "none";
+                    }
+            }
+        </script>
+
+	<section class="about-top-title">
+		<div class="contact-title">
+                	<h1 class="contact-us">Contact Us</h1>
+                </div>
+	</section>
+
+        <section class="about-section">
+            <div class="about-page-all">
+		<div class="about-tag">
+                   <h3 class="contact-header" id="bus-hours">Business Hours</h3>
+                       <ul class="about-page-body">
+                           <li class="hours">Monday - 8am to 5pm</li>
+                           <li class="hours">Tuesday - 8am to 5pm</li>
+                           <li class="hours">Wednesday - 8am to 5pm</li>
+                           <li class="hours">Thursday - 8am to 5pm</li>
+                           <li class="hours">Friday - 8am to 5pm</li>
+                       </ul>
+		</div>
+		<div class="about-tag">
+                   <h3 class="contact-header" id="phone-num">Phone Number</h3>
+                   <p class="about-page-body">601-738-5467</p>
+		</div>
+		<div class="about-tag">
+                   <h3 class="contact-header">Email</h3>
+                   <p class="about-page-body">clarksautorepair@gmail.com</p>
+		</div>
+		<div class="about-tag">
+                   <h3 class="contact-header" id="addy">Address</h3>
+                   <p class="about-page-body">2401 Halls Ferry Rd, Vicksburg, MS 39180, United States</p>
+		</div>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3371.087230326745!2d-90.88016718404128!3d32.33636771362793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8628e03a1eb0e3fb%3A0x616f8f056453aecf!2s2401%20Halls%20Ferry%20Rd%2C%20Vicksburg%2C%20MS%2039180!5e0!3m2!1sen!2sus!4v1633539245565!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" class="geo"></iframe>
+	</div>
+        </section>
+
+
+        <!--This is the footer-->
+        <footer>
+            <div class="all-footer">
+                <div class="footer-section">
+                    <div class="footer-button">
+                        <a href="about.html#bus-hours" class="link-style-bottom">Business Hours</a>
+                    </div>
+                    <div class="footer-button">
+                        <a href="about.html#phone-num" class="link-style-bottom">Call/Email Us</a>
+                    </div>
+                    <div class="footer-button">
+                        <a href="about.html#addy" class="link-style-bottom">Location</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-button">
+                        <a href="services.html#engine" class="link-style-bottom">Engine Servicing</a>
+                    </div>
+                    <div class="footer-button">
+                        <a href="services.html#full" class="link-style-bottom">Auto Maintenance</a>
+                    </div>
+                    <div class="footer-button">
+                        <a href="services.html#additional-stuff" class="link-style-bottom">Additional Services</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/" class="logo-link" target="_blank">
+                            <div class="social-button">
+                                <img src="Images/iconmonstr-facebook-4-240.png" class="social-icon">
+                                <p class="link-style-bottom"> @ClarksAuto on Facebook</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/" class="logo-link" target="_blank">
+                            <div class="social-button">
+                                <img src="Images/iconmonstr-instagram-14-240.png" class="social-icon">
+                                <p class="link-style-bottom"> @ClarksAuto on Instagram</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.snapchat.com/" class="logo-link" target="_blank">
+                            <div class="social-button">
+                                <img src="Images/iconmonstr-snapchat-4-240.png" class="social-icon">
+                                <p class="link-style-bottom"> @ClarksAuto on Snapchat</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
