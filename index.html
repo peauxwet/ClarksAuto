@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clark's Auto Repair</title>
+
+        <link rel="stylesheet" href="CSS/stylesheet-1.css"/>
+
+        <link rel="icon" href="images/favicon/favicon-16x16.png">
+
+    </head>
+    <body>
+    <!--This is the nagivation bar-->
+        <header>
+            <div class="all-header">
+                <a href="index.html" class="logo-link">
+                    <div class="nav-icon">
+                        <img src="Images/wrench logo_adobespark.png" class="nav-pic">
+                        <h1 class="nav-icon-txt">Clark's Auto Repair</h1>
+                    </div>
+                </a>
+                <div class="nav-btns">
+                    <a href="index.html" class="nav-btn">Home</a>
+                    <a href="services.html" class="nav-btn">Services</a>
+                    <a href="about.html" class="nav-btn">Contact</a>
+                </div>
+                <div class="drop">
+                    <button class="drop-btn" onclick="show_hide()">Sponsors</button>
+                    <div id="list-items">
+                        <a href="https://www.toyotires.com/" target="_blank">Toyo Tires</a>
+                        <a href="https://shop.advanceautoparts.com/" target="_blank">Advance Auto Parts</a>
+                        <a href="https://www.sunoco.com/" target="_blank">Sunoco</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <script>
+            function show_hide(){
+                var drop = document.getElementById("list-items");
+                if(drop.style.display === "none"){
+                    drop.style.display = "block";
+                }   else{
+                        drop.style.display = "none";
+                    }
+            }
+        </script>
+
+    <!--This is the top 1/3 of the index page.-->
+        <section class="section-suggestions" style>
+            <div class="all-suggestions">
+                <div class="sugg">
+                    <h3 class="sugg-title">Transmission Repair</h3>
+                    <p class="sugg-desc">Your vehicle's transmission is one of the most essential sytems allowing your car to function properly. Because of this, we offer services from as simple as transmission fluid replacement to full transmission rebuild/replacement.</p>
+                    <div class = "learn-more-form">
+                        <a href="services.html#transmission" class="learn-more">LEARN MORE</a>
+                    </div>
+                </div>
+                <div class="sugg">
+                    <h3 class="sugg-title">Engine Rebuilds/Repair</h3>
+                    <p class="sugg-desc">When your engine doesn't run properly, you know it. Bring in your vehicle for all types of engine repair. It can be as simple as replacing a few parts or as complicated as rebuilding the entire thing.</p>
+                    <div class = "learn-more-form">
+                        <a href="services.html#engine" class="learn-more">LEARN MORE</a>
+                    </div>
+                </div>
+                <div class="sugg">
+                    <h3 class="sugg-title">Full Auto Servicing</h3>
+                    <p class="sugg-desc">Fluids keep your car from exploding while you're driving down the road. From oil, coolant, power steering fluid, differential fluid, to even transmission fluid, we offer every type of fluid servicing you can imagine.</p>
+                    <div class="learn-more-form">
+                        <a href="services.html#full" class="learn-more">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--This is the middle 2/3 of the index page-->
+        <section class="section-about">
+            <div class="about-all">
+                <div class="about-text">
+                    <h1 class="about-header">About Us</h1>
+                    <p class="about-desc">We are one of the few remaining full-service automotive car repair facilities in the Vicksburg area. Since 1981, Clark's Auto Shop has continually grown and improved to better serve and repair cars for our Vicksburg clients. Our desire is to cultivate a continued relationship with you, your family, and your friends, meeting all your vehicle and car repair needs.
+
+                    We desire to create more than just a satisfied customer; we desire to create loyal clients who cannot imagine a world without Clark's Auto Shop. Simply put, we want you to visit more than once, and we want you to tell everyone you know about your experience with us.
+                        
+                    We provide the following services to our customers: Car Care Services, Brake Systems, Cool/Heat Systems, Exhaust Systems, Maintenance Service, Electrical Systems, Fuel Systems, Suspension Systems, Drive Train System, Emissions System and more!</p>
+                </div>
+                <div class="about-picture">
+                    <img src="Images/pexels-malte-luk-2244746.jpg" class="image-1">
+                </div>
+            </div>
+        </section>
+
+        <!--This is the last 3/3 of the index page-->
+        <section class="section-testimonials">
+            <div class="testimonials-all">
+                <div class="testi-title">
+                    <h1>Testimonials</h1>
+                </div>
+                <div class="testi-modules">
+                    <div class="testi">
+                        <p class="testi-desc">"Great work, fair prices and Friendly folks. I am a repeat customer and would recommend to anyone."</p>
+                        <div class="testi-tag">
+                            <h3 class="testi-header">- Tim </h3>
+                            <img src="Images/guy 4.jpg" class="testi-img">
+                        </div>
+                    </div>
+                    <div class="testi">
+                        <p class="testi-desc">"Brian is the only Master mechanic I let work on any of my vehicles! He gets to the bottom of the issue quickly, and has it repaired even faster! Hands down the best in town! Super knowledgeable with great customer service and an awesome attitude to match! All the qualities you would want in your mechanic! You can't go wrong with Clark's Auto Repair!"</p>
+                        <div class="testi-tag">
+                            <h3 class="testi-header">- Noah </h3>
+                            <img src="Images/guy 1.jpg" class="testi-img"/>
+                        </div>
+                    </div>
+                    <div class="testi">
+                        <p class="testi-desc">"I would highly recommend Clark's Auto Repair to anybody. Brian very knowledgeable and experienced. He was able to diagnose the issue very quickly and got me back on the road in no time! 
+                            Look no further for your automotive needs."</p>
+                        <div class="testi-tag">
+                            <h3 class="testi-header">- Brian </h3>
+                            <img src="Images/guy 2.jpg" class="testi-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--This is the footer-->
+        <footer>
+            <div class="all-footer">
+                <div class="footer-section">
+                    <div class="footer-button">
+                        <a href="about.html#bus-hours" class="link-style-bottom">Business Hours</a>
+                    </div>
+                    <div class="footer-button">
+                        <a href="about.html#phone-num" class="link-style-bottom">Call/Email Us</a>
+                    </div>
+                    <div class="footer-button">
+                        <a href="about.html#addy" class="link-style-bottom">Location</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-button">
+                        <a href="services.html#engine" class="link-style-bottom">Engine Servicing</a>
+                    </div>
+                    <div class="footer-button">
+                        <a href="services.html#full" class="link-style-bottom">Auto Maintenance</a>
+                    </div>
+                    <div class="footer-button">
+                        <a href="services.html#additional-stuff" class="link-style-bottom">Additional Services</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/" class="logo-link" target="_blank">
+                            <div class="social-button">
+                                <img src="Images/iconmonstr-facebook-4-240.png" class="social-icon">
+                                <p class="link-style-bottom-social"> @ClarksAuto on Facebook</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/" class="logo-link" target="_blank">
+                            <div class="social-button">
+                                <img src="Images/iconmonstr-instagram-14-240.png" class="social-icon">
+                                <p class="link-style-bottom-social"> @ClarksAuto on Instagram</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.snapchat.com/" class="logo-link" target="_blank">
+                            <div class="social-button">
+                                <img src="Images/iconmonstr-snapchat-4-240.png" class="social-icon">
+                                <p class="link-style-bottom-social"> @ClarksAuto on Snapchat</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
